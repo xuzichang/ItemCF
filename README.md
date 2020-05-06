@@ -96,7 +96,7 @@ for(Like like: likeLists){
 }
 ```
 ### 2、根据物品的相似度和用户的历史行为给用户生成推荐列表
-此时推荐的物品ID为3，4，5。
+此时推荐的物品列表为4，3，5。
 ```java  
 ArrayList<Product> recomLists = new ArrayList<>();      //生成的推荐结果
 
@@ -105,11 +105,14 @@ for(int i = 0; preList.size()>0 && i<5; i++){
 }
 ```
 ### 3、推荐列表不足5个的按点赞数补充。
+此时推荐的物品列表为4，3，5，2，0。
 ```java  
 //推荐数量不满5个, 补足喜欢数最高的文章，考虑重复
 if(recomLists.size()<5){
     recomLists = productdao.findTopNProducts(recomLists);
 }
 ```
+## 三、测试样例
+在当前状态下，用户1001对物品6点赞，刷新后推荐列表更新为0，4，3，5，2。
 简单过程（具体之后补）
 <img src="https://github.com/xuzichang/UserCF/blob/master/ImgForReadme/userCF.jpg" width="750"/>
