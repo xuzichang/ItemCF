@@ -7,8 +7,8 @@
 >  1. 找到与目标用户兴趣相似的用户集合
 >  2. 找到这个集合中用户喜欢的、并且目标用户没有听说过的物品推荐给目标用户
 ### 1、发现兴趣相同的用户[余弦相似度]
-设 N(u) 为用户 u 喜欢的物品集合，N(v) 为用户 v 喜欢的物品集合，那么 u 和 v 的相似度为$$w_uv=|N(u)\bigcapN(v)|\over \sqrt |N(u)|\times |N(v)| $$
-
+设 N(u) 为用户 u 喜欢的物品集合，N(v) 为用户 v 喜欢的物品集合，那么 u 和 v 的相似度为$$w_uv$$
+=|N(u)\bigcapN(v)|\over \sqrt |N(u)|\times |N(v)| 
 
 简单过程（具体之后补）
 <img src="https://github.com/xuzichang/UserCF/blob/master/ImgForReadme/userCF.jpg" width="750"/>
