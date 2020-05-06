@@ -9,12 +9,10 @@
 ### 1、发现兴趣相同的用户[余弦相似度]
 设 N(u) 为用户 u 喜欢的物品集合，N(v) 为用户 v 喜欢的物品集合，那么 u 和 v 的相似度为
 <div align=center><img src="https://github.com/xuzichang/UserCF/blob/master/ImgForReadme/CodeCogsEqn.png" text-align="center"/></div>
-
-| 项目        | 价格   |  数量  |
-| --------   | -----:  | :----:  |
-| 计算机     | \$1600 |   5     |
-| 手机        |   \$12   |   12   |
-| 管线        |    \$1    |  234  |
+以Demo为例，以下为点赞表。
+| 用户ID      |    物品ID   |
+| :--------:  | :--------:  |
+| 1001        |     1       |
 
 简单过程（具体之后补）
 <img src="https://github.com/xuzichang/UserCF/blob/master/ImgForReadme/userCF.jpg" width="750"/>
