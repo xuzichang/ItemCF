@@ -1,20 +1,20 @@
-# UserCF
-个性化推荐（基于用户的协同过滤算法）
+# ItemCF
+个性化推荐（基于物品的协同过滤算法）
 [个性化推荐_视频Demo](https://github.com/xuzichang/UserCF/blob/master/rec%20demo.mp4)
 
 ## 一、原理
-当一个用户 A 需要个性化推荐时，可以先找到和他兴趣相似的用户群体 G，然后把 G 喜欢的、并且 A 没有听说过的物品推荐给 A。
-> 1. 找到与目标用户兴趣相似的用户集合
-> 2. 找到这个集合中用户喜欢的、并且目标用户没有听说过的物品推荐给目标用户
-### 1、发现兴趣相同的用户[余弦相似度]
-设 N(u) 为用户 u 喜欢的物品集合，N(v) 为用户 v 喜欢的物品集合，那么 u 和 v 的相似度为
+> 1. 计算物品之间的相似度
+> 2. 根据物品的相似度和用户的历史行为给用户生成推荐列表
+### 1、计算物品之间的相似度[余弦相似度]
+设 N(u) 表示喜欢物品u的用户数，| N(u) ⋂ N(u) |表示同时喜欢物品u物品v的用户数，那么物品 u 和 v 的相似度为
 <div align=center><img src="https://github.com/xuzichang/UserCF/blob/master/ImgForReadme/CodeCogsEqn.png" text-align="center"/></div>
-以Demo为例，以下为点赞表。
-| 项目        | 价格   |  数量  |
-| --------   | -----:  | :----:  |
-| 计算机     | \$1600 |   5     |
-| 手机        |   \$12   |   12   |
-| 管线        |    \$1    |  234  |
+
+以Demo为例，为用户1001推荐商品。
+
+<div align=center><img src="https://github.com/xuzichang/UserCF/blob/master/ImgForReadme/table.png" text-align="center" height="400px"/></div>
+第一步：跳过当前用户。
+喜欢物品0的
+
 
 简单过程（具体之后补）
 <img src="https://github.com/xuzichang/UserCF/blob/master/ImgForReadme/userCF.jpg" width="750"/>
